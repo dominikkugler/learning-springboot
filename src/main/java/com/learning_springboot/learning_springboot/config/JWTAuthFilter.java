@@ -19,9 +19,11 @@ import java.io.IOException;
 
 @Component
 public class JWTAuthFilter extends OncePerRequestFilter {
-    private final JWTUtils jwtUtils;
+    @Autowired
+    private JWTUtils jwtUtils;
 
-    private final MyUserDetailsService myUserDetailsService;
+    @Autowired
+    private MyUserDetailsService myUserDetailsService;
 
     public JWTAuthFilter(JWTUtils jwtUtils, MyUserDetailsService myUserDetailsService) {
         this.jwtUtils = jwtUtils;

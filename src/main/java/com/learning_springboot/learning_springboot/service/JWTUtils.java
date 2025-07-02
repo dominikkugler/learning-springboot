@@ -2,7 +2,6 @@ package com.learning_springboot.learning_springboot.service;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.security.Keys;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
@@ -20,7 +19,7 @@ public class JWTUtils {
     private static final Long EXPIRATION_TIME = 86400000L; // 24 hours
 
     public JWTUtils() {
-        String secreteString = "c87a330696d7ea72cff1c0848b0954af863fc05c5bffab3f94cf093940db6d37";
+        String secreteString = "843567893696976453275974432697R634976R738467TR678T34865R6834R8763T478378637664538745673865783678548735687R3";
         byte[] keyBytes = Base64.getDecoder().decode(secreteString.getBytes(StandardCharsets.UTF_8));
         this.Key = new SecretKeySpec(keyBytes, "HmacSHA256");
     }
